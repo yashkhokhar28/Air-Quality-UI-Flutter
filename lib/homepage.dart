@@ -1,3 +1,4 @@
+import 'package:airqualityui/citypage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -86,7 +87,13 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(Icons.add),
                           TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (builder) => CityPage(),
+                                ),
+                              );
+                            },
                             child: Text(
                               "Add",
                               style: GoogleFonts.openSans(

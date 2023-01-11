@@ -1,5 +1,3 @@
-import 'package:airqualityui/citypage.dart';
-import 'package:airqualityui/demopage.dart';
 import 'package:airqualityui/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -78,8 +76,7 @@ class _PreLoginPageState extends State<PreLoginPage> {
                     child: TextFormField(
                       controller: passwordController,
                       validator: (value) {
-                        if (value != null &&
-                            value.isEmpty) {
+                        if (value != null && value.isEmpty) {
                           return "Enter Password";
                         }
                       },
@@ -102,7 +99,9 @@ class _PreLoginPageState extends State<PreLoginPage> {
                             });
                           },
                           icon: Icon(
-                            pass == true ? Icons.remove_red_eye : Icons.password,
+                            pass == true
+                                ? Icons.remove_red_eye
+                                : Icons.password,
                             color: Colors.black,
                           ),
                         ),
@@ -156,7 +155,9 @@ class _PreLoginPageState extends State<PreLoginPage> {
                     ),
                     child: TextButton(
                       onPressed: () {
-                        if (formKey.currentState!.validate()) {
+                        if (formKey.currentState!.validate() &&
+                            userNameController.text == "yashkhokhar28" &&
+                            passwordController.text == "YashKhokhar") {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (builder) => HomePage(),
@@ -193,15 +194,7 @@ class _PreLoginPageState extends State<PreLoginPage> {
                       color: Color.fromARGB(255, 255, 169, 164),
                     ),
                     child: TextButton(
-                      onPressed: () {
-                        if (formKey.currentState!.validate()) {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (builder) => CityPage(),
-                            ),
-                          );
-                        }
-                      },
+                      onPressed: null,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -231,15 +224,7 @@ class _PreLoginPageState extends State<PreLoginPage> {
                       // rgba(255,212,183,255)
                     ),
                     child: TextButton(
-                      onPressed: () {
-                        if (formKey.currentState!.validate()) {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (builder) => HomePage(),
-                            ),
-                          );
-                        }
-                      },
+                      onPressed: null,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
