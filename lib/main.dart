@@ -7,7 +7,7 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const DemoPage(),
+      home: const PreLoginPage(),
     ),
   );
 }

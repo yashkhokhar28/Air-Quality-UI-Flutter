@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.only(left:12,top: 20),
+            padding: const EdgeInsets.only(left: 12, top: 20),
             child: Image.asset(
               'assets/pictures/profile_picture.png',
               height: 50,
@@ -344,17 +344,26 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Icon(
-                        Icons.ac_unit,
-                        color: Colors.white,
+                      IconButton(
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.ac_unit,
+                          color: Colors.white,
+                        ),
                       ),
-                      Icon(
-                        Icons.access_alarm,
-                        color: Colors.white,
+                      IconButton(
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.account_balance,
+                          color: Colors.white,
+                        ),
                       ),
-                      Icon(
-                        Icons.account_box,
-                        color: Colors.white,
+                      IconButton(
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.manage_accounts_rounded,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
